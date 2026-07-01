@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CLARUS </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <section>
+       
+        <div class="mobile-frame">  
+        <div class = "image-slider" >  
+                <img src="{{ url_for('static', filename='images/photo.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo1.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo2.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo3.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo4.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo5.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo6.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo7.jpg') }}" class="slide">
+                <img src="{{ url_for('static', filename='images/photo8.jpg') }}" class="slide">
+                
+        </div>
+        </div>
+        <div class="search-bar">
+            <span class = "icon">
+                <ion-icon name="search"></ion-icon>
+            </span>
+            <input type="text" placeholder="Search" readonly>
+        </div>
+
+        <div class="top-bar">
+            <div class="icon-container">
+                <ion-icon name="home"></ion-icon>
+                <span>Home</span>
+            </div>
+            <div class="icon-container">
+                <ion-icon name="people-circle"></ion-icon>
+                <span>People</span>
+            </div>
+            <div class="icon-container">
+                <ion-icon name="chatbubbles"></ion-icon>
+                <span>Chat</span>
+            </div>
+            <div class="icon-container">
+                <ion-icon name="settings"></ion-icon>
+                <span>Settings</span>
+            </div>
+        </div>
+
+        <!-- Profile and App icons on the top-right corner -->
+        
+        <div class="right-corner-icons">
+            <div class="icon-container">
+                <ion-icon name="person-circle" class="profile-icon"></ion-icon>
+                <span>Profile</span>
+            </div>
+            <div class="icon-container">
+                <ion-icon name="apps" class="app-icon"></ion-icon>
+                <span>Apps</span>
+            </div>
+        </div>
+
+        
+        
+        <div class = "Login-box">
+            <header class = "title">
+                <div class="logo-container">
+                    <img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Logo" class="logo">
+                    <h1>CLARUS</h1>
+                </div>
+            </header>
+            <form id="login-form" action="/login" method="POST">
+                <h2> Login </h2>
+                <div class = "input-box">
+                    <span class = "icon">
+                        <ion-icon name = "mail"></ion-icon>
+                    </span>
+                    <input type="email" id="email" name="email" required placeholder="Email">
+                </div>
+                <div class = "input-box">
+                    <span class = "icon">
+                        <ion-icon name = "lock-closed"></ion-icon>
+                    </span> 
+                    <input type="password" id="password" name="password" required placeholder="Password">
+                </div>
+                <div class = "remember">
+                    <label>
+                        <input type = "checkbox"> Remember me 
+                    </label>
+                </div>
+                <button type = "submit" > Login </button>
+                <div class = "register-link">
+                    <p> Don't have an account?
+                        <a href = "#">Register</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+
+
+
+</section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+
+
+

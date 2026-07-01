@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLARUS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+</head>
+<body>
+    <header class = "title">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/photo.jpg') }}" alt="Logo" class="logo">
+            <h1>CLARUS</h1>
+        </div>
+    </header>
+    <section>
+        
+            
+        <h3>thebohogirl</h3>
+        <h4>mostlysane</h4>
+        <h5>bhuvanbam</h5>
+    
+        <div class="left-bar">
+            <div class="icon-container"><ion-icon name="home"></ion-icon><span>Home</span></div>
+            <div class="icon-container"><ion-icon name="search"></ion-icon><span>Search</span></div>
+            <div class="icon-container"><ion-icon name="timer"></ion-icon><span>Explore</span></div>
+            <div class="icon-container"><ion-icon name="chatbox"></ion-icon><span>Messages</span></div>
+            <div class="icon-container"><ion-icon name="videocam"></ion-icon><span>Reels</span></div>
+            <div class="icon-container"><ion-icon name="notifications"></ion-icon><span>Notification</span></div>
+            <div class="icon-container"><ion-icon name="settings"></ion-icon><span>Settings</span></div>
+    
+            <div class="bottom-icons">
+                <div class="icon-container"><ion-icon name="reorder-three"></ion-icon><span>More</span></div>
+                <div class="icon-container"><ion-icon name="person-circle" class="profile-icon"></ion-icon><span>Profile</span></div>
+            </div>
+        </div>
+            
+            <!-- Post 1 -->
+        <div>
+            <div class="Profilephoto1">
+                <img src="{{ url_for('static', filename='images/profilelogo1.jpg') }}">
+            </div>
+            <div class="Postedphoto1">
+                <img src="{{ url_for('static', filename='images/Postedphoto1.jpg') }}" alt="Posted Photo">
+            </div>
+            <div class="Postedphotoicon first-instance">
+                <div class="Postedicon-container"><ion-icon name="heart"></ion-icon><span id="likeCount">0 likes</span></div>
+                <div class="Postedicon-container"><ion-icon name="chatbubble"></ion-icon></div>
+                <div class="Postedicon-container"><ion-icon name="share-social"></ion-icon></div>
+
+                <div class="comments-list"></div>
+
+                <div class="Comment-box">
+                    <form id="commentForm">
+                        <h2>Comment</h2>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="text" name="comment" required placeholder="Enter Your Comment">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="predictionResult" style="margin-top: 20px; font-weight: bold;"></div>
+                </div>
+                
+            </div>
+        </div>
+            
+            <!-- Post 2 -->
+        <div>
+            <div class="Profilephoto2">
+                <img src="{{ url_for('static', filename='images/profilelogo2.jpg') }}">
+            </div>
+            <div class="Postedphoto2">
+                <img src="{{ url_for('static', filename='images/Postedphoto2.jpg') }}" alt="Posted Photo">
+            </div>
+            <div class="Postedphotoicon second-instance">
+                <div class="Postedicon-container"><ion-icon name="heart"></ion-icon><span id="likeCount">0 likes</span></div>
+                <div class="Postedicon-container"><ion-icon name="chatbubble"></ion-icon></div>
+                <div class="Postedicon-container"><ion-icon name="share-social"></ion-icon></div>
+
+                <div class="comments-list"></div>
+
+                <div class="Comment-box">
+                    <form id="commentForm">
+                        <h2>Comment</h2>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="text" name="comment" required placeholder="Enter Your Comment">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="predictionResult" style="margin-top: 20px; font-weight: bold;"></div>
+                </div>
+                
+            </div>
+        </div>
+            
+        <!-- Post 3 -->
+        <div>
+            <div class="Profilephoto3">
+                <img src="{{ url_for('static', filename='images/profilelogo3.jpg') }}">
+            </div>
+            <div class="Postedphoto3">
+                <img src="{{ url_for('static', filename='images/Postedphoto3.jpg') }}" alt="Posted Photo">
+            </div>
+            <div class="Postedphotoicon third-instance">
+                <div class="Postedicon-container"><ion-icon name="heart"></ion-icon><span id="likeCount">0 likes</span></div>
+                <div class="Postedicon-container"><ion-icon name="chatbubble"></ion-icon></div>
+                <div class="Postedicon-container"><ion-icon name="share-social"></ion-icon></div>
+
+                <div class="comments-list"></div>
+
+                <div class="Comment-box">
+                    <form id="commentForm">
+                        <h2>Comment</h2>
+                        <div class="input-box">
+                            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                            <input type="text" name="comment" required placeholder="Enter Your Comment">
+                        </div>
+                        <button type="submit">Submit</button>
+                    </form>
+                    <div id="predictionResult" style="margin-top: 20px; font-weight: bold;"></div>
+                </div>
+            </div>
+        </div>
+            
+            <!-- Pop-up Modal -->
+        <div id="popupModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="popupMessage"></p>
+                <button type="button">OK</button>
+            </div>
+        </div>
+    </section>
+    
+        <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.1.0/ionicons.min.js"></script>
+
+
+        <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    // Handle comment submission for all forms
+    document.querySelectorAll(".Comment-box form").forEach(form => {
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+            const commentInput = this.querySelector("input[name='comment']");
+            const commentText = commentInput.value;
+            const predictionResult = this.parentElement.querySelector("#predictionResult");
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: commentText })
+                });
+
+                const data = await response.json();
+
+                // Show the popup based on the result
+                if (data.status === 'error') {
+                    showPopup(data.message, "error");
+                } else if (data.status === 'success') {
+                    displayComment(commentText, this);
+                    showPopup(data.message, "success");
+                }
+            } catch (error) {
+                showPopup(`Error: ${error.message}`, "error");
+            }
+        });
+    });
+    
+
+    // Handle like buttons for all posts
+    document.querySelectorAll(".Postedphotoicon").forEach(post => {
+        const likeButton = post.querySelector("ion-icon[name='heart']");
+        const likeCount = post.querySelector("span[id='likeCount']");
+        let count = 0;
+
+        likeButton.addEventListener("click", function () {
+            count++;
+            likeCount.textContent = count === 1 ? `${count} like` : `${count} likes`;
+            likeButton.style.color = "red"; // Change color when liked
+        });
+    });
+
+    // Handle comment box toggle for all posts
+    document.querySelectorAll(".Postedicon-container ion-icon[name='chatbubble']").forEach((commentIcon, index) => {
+        commentIcon.addEventListener("click", function () {
+            const commentBox = document.querySelectorAll(".Comment-box")[index];
+            commentBox.classList.toggle("show");
+        });
+    });
+});
+
+// Function to show the pop-up
+function showPopup(message, type) {
+    const modal = document.getElementById("popupModal");
+    const popupMessage = document.getElementById("popupMessage");
+    const overlay = document.getElementById("overlay");
+    const okButton = modal.querySelector("button");
+
+    popupMessage.textContent = message;
+    modal.classList.remove("success", "error");
+    okButton.classList.remove("non-toxic", "toxic");
+
+    modal.classList.add(type);
+    modal.classList.add("show");
+
+    if (type === "error") {
+        okButton.classList.add("toxic");
+    } else if (type === "success") {
+        okButton.classList.add("non-toxic");
+    }
+
+    modal.style.display = "block";
+    overlay.style.display = "block";
+
+    okButton.addEventListener("click", function () {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+    });
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+            overlay.style.display = "none";
+        }
+    };
+}
+function displayComment(commentText, formElement) {
+    let postContainer = formElement.closest(".Postedphotoicon"); // Find the closest post container
+    
+
+    if (!postContainer) {
+        console.error("Error: Could not find .Postedphotoicon for the comment form.");
+        showPopup("Error: Could not find the correct post container.", "error");
+        return; // Stop execution to prevent further errors
+    }
+
+    let commentsList = postContainer.querySelector(".comments-list");
+
+    if (!commentsList) {
+        console.error("Error: Could not find .comments-list within the post.");
+        showPopup("Error: Comment section not found.", "error");
+        return;
+    }
+
+    const commentElement = document.createElement("div");
+    commentElement.classList.add("comment-item");
+    commentElement.textContent = commentText;
+    commentsList.appendChild(commentElement);
+}
+
+
+</script>
+    <div id="overlay" class="overlay"></div>
+
+    </body>
+</html>
